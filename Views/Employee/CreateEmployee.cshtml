@@ -1,0 +1,52 @@
+﻿@model Employee
+
+<h2>Create Employee</h2>
+
+@*@using (Html.BeginForm())
+{*@
+    <form action="/Employee/CreateEmployee" method="post">   
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Name)
+        @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Address)
+        @Html.TextBoxFor(model => model.Address, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Mobile)
+        @Html.TextBoxFor(model => model.Mobile, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Mobile, "", new { @class = "text-danger" })
+    </div>
+     <div class="form-group">
+        @Html.LabelFor(model => model.DOB)
+        @Html.TextBoxFor(model => model.DOB, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.DOB, "", new { @class = "text-danger" })
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+    </form>
+@*}*@
+
+    @*<div class="form-group">
+        <label for="Name">Name</label>
+        <input class="form-control" data-val="true" data-val-required="The Name field is required." id="Name" name="Name" type="text" value="">
+    </div>
+    <div class="form-group">
+        <label for="Address">Address</label>
+        <input class="form-control" data-val="true" data-val-required="The Address field is required." id="Address" name="Address" type="text" value="">
+    </div>
+    <div class="form-group">
+        <label for="Mobile">Mobile</label>
+        <input class="form-control" data-val="true" data-val-required="The Mobile field is required." id="Mobile" name="Mobile" type="text" value="">
+    </div>
+     <div class="form-group">
+        <label for="DOB">DOB</label>
+        <input class="form-control" data-val="true" data-val-required="The DOB field is required." id="DOB" name="DOB" type="text" value="">
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8IFqB3u2jGJEkHs7LFGLfe97wfQbs46iOvbPIOIiRNPZxAfSdqXzsbn83XBvhr16JJTY7VgeMPK75Xtg8d6I3dPOSrwjIAnIb0ypG0yitxypWTcuRAm85hpITPM3XMDT63nq6JbaF-7bbdKDHTWK0Ro">
+*@
